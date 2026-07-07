@@ -1,0 +1,6 @@
+{
+  "name": "Sutton Sovereign Audit Node",
+  "description": "A secure forensic ledger and multi-sig verification node featuring the Skeptic's Reflex adversarial compute jitter detection, an Epistemic Privacy Filter (EPF), and a SHA-256 cryptographic chain.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

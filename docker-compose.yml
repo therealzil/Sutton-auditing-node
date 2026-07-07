@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  sovereign-node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sovereign_audit_node_pilot
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Internal path mapping for the Ledger DB to align with the volume mount
+      - LEDGER_STORAGE_PATH=/app/data/ledger.json 
+      # Toggle for the Licensing Gate we just built
+      - LICENSE_GATEWAY_ACTIVE=true
+    volumes:
+      - sovereign_ledger_data:/app/data
+    networks:
+      - sovereign_net
+
+volumes:
+  sovereign_ledger_data:
+    name: "sovereign_ledger_data"
+
+networks:
+  sovereign_net:
+    driver: bridge

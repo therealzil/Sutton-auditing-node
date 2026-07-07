@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-brand-dark: #020203;
+  --color-brand-card: #0a0a0c;
+  --color-brand-card-light: #111115;
+  --color-brand-green: #00ff9d;
+  --color-brand-red: #ff4444;
+  --color-brand-border: #1a1a1a;
+  --color-brand-border-light: #333333;
+}
+
+@utility glow-green {
+  text-shadow: 0 0 8px #00ff9d;
+}
+
+@utility glow-red {
+  text-shadow: 0 0 8px #ff4444;
+}
+
+@utility shadow-glow-green {
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.15);
+}
+
+@utility shadow-glow-red {
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.15);
+}
+
+@keyframes scan-line-sweep {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@utility animate-scan-line {
+  animation: scan-line-sweep 2.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+

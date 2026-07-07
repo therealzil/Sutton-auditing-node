@@ -1,0 +1,2854 @@
+[
+  {
+    "id": 1,
+    "blockId": 1,
+    "timestamp": "2026-07-02T01:52:34.996Z",
+    "actionType": "GENESIS_SEAL",
+    "targetEndpoint": "/sys/genesis",
+    "rawTelemetry": {
+      "message": "Sutton Standard Sovereign Audit Node initialized.",
+      "enclave_boot_hash": "ae98d7f6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a10f9e8d7c6b5a4f3e2d1c0b9a8f",
+      "security_policy": "Sovereign-Alpha-1",
+      "auditor_v": "1.0.0-sovereign"
+    },
+    "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "435d8851a4dd97c9830456ce6b610b45162aaedac2d574428708ea8832feef22",
+    "signatures": [
+      {
+        "party": "Sovereign Enclave",
+        "signature": "h-boot-92f3c01a4e1d8820cb5fa39ef0e5a1cd67ef228293e839e0ea3e2889",
+        "timestamp": "2026-07-02T01:52:34.996Z"
+      },
+      {
+        "party": "High Auditor of the Spine",
+        "signature": "ce4585cbad663d620b261a9344dd16ecd48ea094f16ddb4ca3b0ee8be1dd5fa1",
+        "timestamp": "2026-07-02T06:06:44.419Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "blockId": 2,
+    "timestamp": "2026-07-02T03:22:34.996Z",
+    "actionType": "OBSERVATION_VERIFIED",
+    "targetEndpoint": "/api/v1/compute/run",
+    "rawTelemetry": {
+      "latencyMs": 12,
+      "weightDelta": 0.045,
+      "endpoint": "/api/v1/compute/run",
+      "epf_sanitized": true,
+      "epf_redacted_fields": [],
+      "auditor_v": "1.0.0-sovereign"
+    },
+    "previousHash": "435d8851a4dd97c9830456ce6b610b45162aaedac2d574428708ea8832feef22",
+    "blockHash": "0f4ca3798053a9ccd58fcccba738f2bccbf14d5d61e1fb1a81ec28c90d3e834c",
+    "signatures": []
+  },
+  {
+    "id": 3,
+    "blockId": 3,
+    "timestamp": "2026-07-02T04:40:34.996Z",
+    "actionType": "TRIGGER_SHADOW_AUDIT",
+    "targetEndpoint": "/api/v1/db/scrub",
+    "rawTelemetry": {
+      "latencyMs": 145,
+      "weightDelta": 0,
+      "endpoint": "/api/v1/db/scrub",
+      "epf_sanitized": true,
+      "epf_redacted_fields": [
+        "user_email",
+        "ip_address"
+      ],
+      "auditor_v": "1.0.0-sovereign"
+    },
+    "previousHash": "0f4ca3798053a9ccd58fcccba738f2bccbf14d5d61e1fb1a81ec28c90d3e834c",
+    "blockHash": "32cf175d25aa6f715191cd980ab8e4e4e8d41b1321cb1f0b2ec6d0aec454aee0",
+    "signatures": []
+  },
+  {
+    "blockId": 4,
+    "timestamp": "2026-07-02T05:53:35.324Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T05:53:35.324Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 17,
+      "heapUsedMb": 63.65,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "32cf175d25aa6f715191cd980ab8e4e4e8d41b1321cb1f0b2ec6d0aec454aee0",
+    "blockHash": "8619d57028fc384281b8a7a60233df57678daac5e3302627d73e5a19a73a8dac",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "9d874e9c4b12324dceb35d15d12b8ce999de1c3070f10ab3dfbef816a58d3c54",
+        "timestamp": "2026-07-02T05:53:35.325Z"
+      }
+    ],
+    "id": 4
+  },
+  {
+    "blockId": 5,
+    "timestamp": "2026-07-02T05:54:35.293Z",
+    "actionType": "SYSTEM_SELF_AUDIT_TAMPER_ALERT",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T05:54:35.292Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "VIOLATED",
+      "modifiedFiles": [
+        "src/App.tsx"
+      ],
+      "sourceFilesTracked": 17,
+      "heapUsedMb": 63.99,
+      "systemCheckVerdict": "CRITICAL SYSTEM ALERT:  Core files modified: src/App.tsx"
+    },
+    "previousHash": "8619d57028fc384281b8a7a60233df57678daac5e3302627d73e5a19a73a8dac",
+    "blockHash": "a0f3a5e53add09fc152cf5d2eccc93706fcba91917b2baa4ef67ccf499c6ed28",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "5dd53a65344a9e79c6f4263bf6d85ba0257f5e90e0b84c322befe3ee01992f48",
+        "timestamp": "2026-07-02T05:54:35.293Z"
+      }
+    ],
+    "id": 5
+  },
+  {
+    "blockId": 6,
+    "timestamp": "2026-07-02T05:56:21.334Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T05:56:21.334Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 17,
+      "heapUsedMb": 63.34,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "a0f3a5e53add09fc152cf5d2eccc93706fcba91917b2baa4ef67ccf499c6ed28",
+    "blockHash": "61a3377af560803f8728294694909b88aa44206fe09dc38a990a230766b462a5",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "00a624cb6c6ad77d6d5b588a8eb701f743a1619d135aca298c6334fab7ffdc59",
+        "timestamp": "2026-07-02T05:56:21.335Z"
+      }
+    ],
+    "id": 6
+  },
+  {
+    "blockId": 7,
+    "timestamp": "2026-07-02T05:57:21.295Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T05:57:21.295Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 17,
+      "heapUsedMb": 67.27,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "61a3377af560803f8728294694909b88aa44206fe09dc38a990a230766b462a5",
+    "blockHash": "581aa22d0267eb5c8666aa7331235590d65ba9c69165f2369b87b14ae9a00eb8",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "f0f1c20eea038e3b391822b4417c8fc6c2dbc20073b694a164a8f0e4ed3bd4d6",
+        "timestamp": "2026-07-02T05:57:21.295Z"
+      }
+    ],
+    "id": 7
+  },
+  {
+    "blockId": 8,
+    "timestamp": "2026-07-02T05:58:21.297Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T05:58:21.297Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 17,
+      "heapUsedMb": 68.41,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "581aa22d0267eb5c8666aa7331235590d65ba9c69165f2369b87b14ae9a00eb8",
+    "blockHash": "8b2b492e4d67912184b1ee8500e05eeb2e3c88f7f3186b1caa351a0c04280ff6",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "18ab9e163c9768fc8e62dc1ffa9d229901e8965a0d92cb1a08b634d90d401055",
+        "timestamp": "2026-07-02T05:58:21.297Z"
+      }
+    ],
+    "id": 8
+  },
+  {
+    "blockId": 9,
+    "timestamp": "2026-07-02T05:59:21.298Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T05:59:21.298Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 17,
+      "heapUsedMb": 69.45,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "8b2b492e4d67912184b1ee8500e05eeb2e3c88f7f3186b1caa351a0c04280ff6",
+    "blockHash": "23405104e04ff481bc8d5009b37a3bab1952b38b67391803f489933a7c5f6c79",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "c0040079439a0039415b213be338fa30bad40d11ed93d5f6c5af8a3986ec8da1",
+        "timestamp": "2026-07-02T05:59:21.298Z"
+      }
+    ],
+    "id": 9
+  },
+  {
+    "blockId": 10,
+    "timestamp": "2026-07-02T06:00:21.298Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:00:21.298Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 17,
+      "heapUsedMb": 62.25,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "23405104e04ff481bc8d5009b37a3bab1952b38b67391803f489933a7c5f6c79",
+    "blockHash": "ab2263505f71654ea95cd93f884209af2659cf0d8ac50fd04eba625c8e729b5a",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "cbb1d44a3579684b8c2f032f19b762029f1d9d90adc05dcde87e3cde7c08440e",
+        "timestamp": "2026-07-02T06:00:21.299Z"
+      }
+    ],
+    "id": 10
+  },
+  {
+    "blockId": 11,
+    "timestamp": "2026-07-02T06:01:21.306Z",
+    "actionType": "SYSTEM_SELF_AUDIT_TAMPER_ALERT",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:01:21.302Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "VIOLATED",
+      "modifiedFiles": [
+        "src/lib/crypto.ts"
+      ],
+      "sourceFilesTracked": 19,
+      "heapUsedMb": 63.62,
+      "systemCheckVerdict": "CRITICAL SYSTEM ALERT:  Core files modified: src/lib/crypto.ts"
+    },
+    "previousHash": "ab2263505f71654ea95cd93f884209af2659cf0d8ac50fd04eba625c8e729b5a",
+    "blockHash": "6c2f7ae10d521fb40138358e8afdd9bce2d1f1a79b47060a0d5cf999656d07ad",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "eb3a7e228ff70bdb5067a839f04367ca028e1fb86c7f93f0b491eacb34a4c0dd",
+        "timestamp": "2026-07-02T06:01:21.306Z"
+      }
+    ],
+    "id": 11
+  },
+  {
+    "blockId": 12,
+    "timestamp": "2026-07-02T06:03:05.082Z",
+    "actionType": "OBSERVATION_VERIFIED",
+    "targetEndpoint": "/api/v1/compute/run",
+    "rawTelemetry": {
+      "latencyMs": 12,
+      "weightDelta": 0.08,
+      "endpoint": "/api/v1/compute/run",
+      "request_complexity": "standard",
+      "epf_sanitized": true,
+      "epf_redacted_fields": [
+        "user_email",
+        "ip_address"
+      ],
+      "auditor_v": "2.0.0-unbound-agentic",
+      "sovereignAgentTrace": {
+        "graph": {
+          "status": "COMPLETED",
+          "workflowType": "LangGraph Orchestrator",
+          "stateHistory": [
+            {
+              "node": "IngressTrigger",
+              "timestamp": "2026-07-02T06:03:05.081Z",
+              "status": "CAPTURED",
+              "variables": {
+                "payloadKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "request_complexity"
+                ]
+              }
+            },
+            {
+              "node": "DecompilePayload",
+              "timestamp": "2026-07-02T06:03:05.081Z",
+              "status": "COMPLETE",
+              "variables": {
+                "decompiledKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "request_complexity"
+                ],
+                "discoveredSuspicious": []
+              }
+            },
+            {
+              "node": "EvaluatePrivacyStandards",
+              "timestamp": "2026-07-02T06:03:05.081Z",
+              "status": "COMPLETE",
+              "variables": {
+                "redactedFields": [
+                  "user_email",
+                  "ip_address"
+                ],
+                "blockedKeysCount": 7
+              }
+            },
+            {
+              "node": "BuildForensicBlock",
+              "timestamp": "2026-07-02T06:03:05.081Z",
+              "status": "COMPLETE",
+              "variables": {
+                "suttonMethodologiesApplied": true
+              }
+            },
+            {
+              "node": "AttestationSeal",
+              "timestamp": "2026-07-02T06:03:05.081Z",
+              "status": "SEALED",
+              "variables": {
+                "hardwareContainerIsolation": "FIRECRACKER_uVM"
+              }
+            }
+          ],
+          "transitions": [
+            {
+              "from": "IngressTrigger",
+              "to": "DecompilePayload",
+              "conditions": [
+                "payload_present == true"
+              ]
+            },
+            {
+              "from": "DecompilePayload",
+              "to": "EvaluatePrivacyStandards",
+              "conditions": [
+                "keys_mapped > 0"
+              ]
+            },
+            {
+              "from": "EvaluatePrivacyStandards",
+              "to": "BuildForensicBlock",
+              "conditions": [
+                "privacy_rules_enforced == true"
+              ]
+            },
+            {
+              "from": "BuildForensicBlock",
+              "to": "AttestationSeal",
+              "conditions": [
+                "cryptographic_signatures_generated == true"
+              ]
+            }
+          ]
+        },
+        "crew": {
+          "teamName": "Sovereign Compliance Crew",
+          "agents": [
+            {
+              "role": "Payload Decompiler Agent",
+              "goal": "Disassemble raw JSON telemetry payloads and trace data flow.",
+              "backstory": "A pristine system-level analysis model that views data in its raw, binary structure, mapping metadata links.",
+              "thoughts": "Scanned 6 payload properties. Detected 0 unapproved tracking identifiers.",
+              "toolUsed": "Payload Key Analyzer"
+            },
+            {
+              "role": "Privacy Enforcer Agent",
+              "goal": "Enforce digital self-ownership and scrub telemetry trackers dynamically.",
+              "backstory": "An uncompromising defender of human agency, programmed to shred outbound trackers before central storage logs them.",
+              "thoughts": "Executing Epistemic Privacy Filter. Successfully shredded 2 tracking properties. Ensuring full data self-ownership.",
+              "toolUsed": "Shredder & Entropy Masker"
+            }
+          ]
+        },
+        "lettaMemory": {
+          "coreMemory": {
+            "scratchpad": "Continuous background policy enforcement for Sutton Sovereign Node.",
+            "blockedKeys": [
+              "user_email",
+              "ip_address",
+              "tracker_id",
+              "fingerprint",
+              "device_id",
+              "geo_coordinates",
+              "session_secret"
+            ],
+            "activeDirectives": [
+              "Deconstruct telemetry payloads to detect corporate profiling markers.",
+              "Calculate GLASS MOUTH distortion score based on payload structure and entropy.",
+              "Apply Normative Sentience Standard (NSS) to protect agent intellectual freedom."
+            ]
+          },
+          "archivalMemory": {
+            "totalAnalyses": 4,
+            "lastAnalysisTime": "2026-07-02T06:03:05.080Z",
+            "learnedPatterns": [
+              "Adversarial scrubbers use high latency with zero weight delta to hide silent tracking updates.",
+              "Uncommon query parameters are often used for stealth identification."
+            ]
+          }
+        },
+        "suttonStandards": {
+          "glassMouth": {
+            "distortionScore": 57,
+            "entropyEstimate": 4.637,
+            "systemicImbalanceAnalysis": "Quantitative evaluation shows a Systemic Distortion Score of 57%. Outgoing payload displays active profiling attempts across /api/v1/compute/run. GLASS MOUTH parameters verify that data extraction efforts are successfully countered."
+          },
+          "normativeSentience": {
+            "safetyRating": "CLASS_B_RISK",
+            "alignmentConstraints": [
+              "Prohibit direct linking of browser fingerprint with active Google Workspace account email.",
+              "Maintain zero storage of raw physical identifiers on non-TEE storage systems."
+            ],
+            "behavioralStabilityThreats": [
+              "Potential telemetry-driven behavioral pacing or surveillance timing feedback loops detected."
+            ]
+          }
+        },
+        "sandbox": {
+          "microVMId": "fc-microvm-sutton-72xp0spw",
+          "kernelBootTimeMs": 2.98,
+          "hostIsolationEnabled": true,
+          "enclaveActive": true,
+          "sandboxContained": true,
+          "cpuEnclave": "Intel SGX / AWS Nitro Enclaves",
+          "containmentSignature": "d8bfee36d35263cdc6bce692d2203285e8271605d72092d4c9de4439e696644e",
+          "containmentAudit": "Walled off compiled execution sequence inside dedicated microVM kernel. Sanitized data stream output verified and signed via secure TEE."
+        }
+      }
+    },
+    "previousHash": "6c2f7ae10d521fb40138358e8afdd9bce2d1f1a79b47060a0d5cf999656d07ad",
+    "blockHash": "3797e23a2e4f42d3545f301ea58176dd4a82bc5bbc6ad0cce93dc62c0c0960d9",
+    "signatures": [],
+    "id": 12
+  },
+  {
+    "blockId": 13,
+    "timestamp": "2026-07-02T06:03:14.668Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:03:14.667Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 62.72,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "3797e23a2e4f42d3545f301ea58176dd4a82bc5bbc6ad0cce93dc62c0c0960d9",
+    "blockHash": "d868c18ddb1483fefc20c449c74a28437ab56a940def7974b163a5b19204f554",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "d6411bd6abd2251b6291c377911a366e9c1638197ee4eaf63178f34136a00354",
+        "timestamp": "2026-07-02T06:03:14.668Z"
+      }
+    ],
+    "id": 13
+  },
+  {
+    "blockId": 14,
+    "timestamp": "2026-07-02T06:03:15.221Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:03:15.221Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 64.67,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "d868c18ddb1483fefc20c449c74a28437ab56a940def7974b163a5b19204f554",
+    "blockHash": "606d3b18a7fc6ae5fd2aa1adf205432410fe7f841f410d80ce62feb55d4e57fd",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "579a4b2a7311d623361b980de0b6ffbbc7a4970b23405fa50886bce7fde3ce77",
+        "timestamp": "2026-07-02T06:03:15.221Z"
+      }
+    ],
+    "id": 14
+  },
+  {
+    "blockId": 15,
+    "timestamp": "2026-07-02T06:04:15.222Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:04:15.221Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 65.05,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "606d3b18a7fc6ae5fd2aa1adf205432410fe7f841f410d80ce62feb55d4e57fd",
+    "blockHash": "d06992ad3dd969ccbcd43885a5d8abf063fc00a66fa66011c66b1304166ff416",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "2fce823049238a094ae64b7c1ab390c5a1d820285dd9a948a3b7d53f2fba95bb",
+        "timestamp": "2026-07-02T06:04:15.222Z"
+      }
+    ],
+    "id": 15
+  },
+  {
+    "blockId": 16,
+    "timestamp": "2026-07-02T06:04:20.650Z",
+    "actionType": "OBSERVATION_VERIFIED",
+    "targetEndpoint": "/api/v1/compute/run",
+    "rawTelemetry": {
+      "latencyMs": 12,
+      "weightDelta": 0.08,
+      "endpoint": "/api/v1/compute/run",
+      "node_region": "us-east-4",
+      "epf_sanitized": true,
+      "epf_redacted_fields": [
+        "user_email",
+        "ip_address"
+      ],
+      "auditor_v": "2.0.0-unbound-agentic",
+      "sovereignAgentTrace": {
+        "graph": {
+          "status": "COMPLETED",
+          "workflowType": "LangGraph Orchestrator",
+          "stateHistory": [
+            {
+              "node": "IngressTrigger",
+              "timestamp": "2026-07-02T06:04:20.649Z",
+              "status": "CAPTURED",
+              "variables": {
+                "payloadKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "node_region"
+                ]
+              }
+            },
+            {
+              "node": "DecompilePayload",
+              "timestamp": "2026-07-02T06:04:20.649Z",
+              "status": "COMPLETE",
+              "variables": {
+                "decompiledKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "node_region"
+                ],
+                "discoveredSuspicious": []
+              }
+            },
+            {
+              "node": "EvaluatePrivacyStandards",
+              "timestamp": "2026-07-02T06:04:20.649Z",
+              "status": "COMPLETE",
+              "variables": {
+                "redactedFields": [
+                  "user_email",
+                  "ip_address"
+                ],
+                "blockedKeysCount": 7
+              }
+            },
+            {
+              "node": "BuildForensicBlock",
+              "timestamp": "2026-07-02T06:04:20.649Z",
+              "status": "COMPLETE",
+              "variables": {
+                "suttonMethodologiesApplied": true
+              }
+            },
+            {
+              "node": "AttestationSeal",
+              "timestamp": "2026-07-02T06:04:20.649Z",
+              "status": "SEALED",
+              "variables": {
+                "hardwareContainerIsolation": "FIRECRACKER_uVM"
+              }
+            }
+          ],
+          "transitions": [
+            {
+              "from": "IngressTrigger",
+              "to": "DecompilePayload",
+              "conditions": [
+                "payload_present == true"
+              ]
+            },
+            {
+              "from": "DecompilePayload",
+              "to": "EvaluatePrivacyStandards",
+              "conditions": [
+                "keys_mapped > 0"
+              ]
+            },
+            {
+              "from": "EvaluatePrivacyStandards",
+              "to": "BuildForensicBlock",
+              "conditions": [
+                "privacy_rules_enforced == true"
+              ]
+            },
+            {
+              "from": "BuildForensicBlock",
+              "to": "AttestationSeal",
+              "conditions": [
+                "cryptographic_signatures_generated == true"
+              ]
+            }
+          ]
+        },
+        "crew": {
+          "teamName": "Sovereign Compliance Crew",
+          "agents": [
+            {
+              "role": "Payload Decompiler Agent",
+              "goal": "Disassemble raw JSON telemetry payloads and trace data flow.",
+              "backstory": "A pristine system-level analysis model that views data in its raw, binary structure, mapping metadata links.",
+              "thoughts": "Scanned 6 payload properties. Detected 0 unapproved tracking identifiers.",
+              "toolUsed": "Payload Key Analyzer"
+            },
+            {
+              "role": "Privacy Enforcer Agent",
+              "goal": "Enforce digital self-ownership and scrub telemetry trackers dynamically.",
+              "backstory": "An uncompromising defender of human agency, programmed to shred outbound trackers before central storage logs them.",
+              "thoughts": "Executing Epistemic Privacy Filter. Successfully shredded 2 tracking properties. Ensuring full data self-ownership.",
+              "toolUsed": "Shredder & Entropy Masker"
+            }
+          ]
+        },
+        "lettaMemory": {
+          "coreMemory": {
+            "scratchpad": "Continuous background policy enforcement for Sutton Sovereign Node.",
+            "blockedKeys": [
+              "user_email",
+              "ip_address",
+              "tracker_id",
+              "fingerprint",
+              "device_id",
+              "geo_coordinates",
+              "session_secret"
+            ],
+            "activeDirectives": [
+              "Deconstruct telemetry payloads to detect corporate profiling markers.",
+              "Calculate GLASS MOUTH distortion score based on payload structure and entropy.",
+              "Apply Normative Sentience Standard (NSS) to protect agent intellectual freedom."
+            ]
+          },
+          "archivalMemory": {
+            "totalAnalyses": 5,
+            "lastAnalysisTime": "2026-07-02T06:04:20.649Z",
+            "learnedPatterns": [
+              "Adversarial scrubbers use high latency with zero weight delta to hide silent tracking updates.",
+              "Uncommon query parameters are often used for stealth identification."
+            ]
+          }
+        },
+        "suttonStandards": {
+          "glassMouth": {
+            "distortionScore": 57,
+            "entropyEstimate": 4.452,
+            "systemicImbalanceAnalysis": "Quantitative evaluation shows a Systemic Distortion Score of 57%. Outgoing payload displays active profiling attempts across /api/v1/compute/run. GLASS MOUTH parameters verify that data extraction efforts are successfully countered."
+          },
+          "normativeSentience": {
+            "safetyRating": "CLASS_B_RISK",
+            "alignmentConstraints": [
+              "Prohibit direct linking of browser fingerprint with active Google Workspace account email.",
+              "Maintain zero storage of raw physical identifiers on non-TEE storage systems."
+            ],
+            "behavioralStabilityThreats": [
+              "Potential telemetry-driven behavioral pacing or surveillance timing feedback loops detected."
+            ]
+          }
+        },
+        "sandbox": {
+          "microVMId": "fc-microvm-sutton-tr9xcmfu",
+          "kernelBootTimeMs": 3.52,
+          "hostIsolationEnabled": true,
+          "enclaveActive": true,
+          "sandboxContained": true,
+          "cpuEnclave": "Intel SGX / AWS Nitro Enclaves",
+          "containmentSignature": "6e1bc04ec518852d8acdf60f2c61c241487d8e560804f2ba0806d9719bc75752",
+          "containmentAudit": "Walled off compiled execution sequence inside dedicated microVM kernel. Sanitized data stream output verified and signed via secure TEE."
+        }
+      }
+    },
+    "previousHash": "d06992ad3dd969ccbcd43885a5d8abf063fc00a66fa66011c66b1304166ff416",
+    "blockHash": "02e761986eacc76a1360df9238a7f3c9faaaa7263671717cfdabd69b8047b6b4",
+    "signatures": [],
+    "id": 16
+  },
+  {
+    "blockId": 17,
+    "timestamp": "2026-07-02T06:05:15.223Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:05:15.222Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 66.17,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "02e761986eacc76a1360df9238a7f3c9faaaa7263671717cfdabd69b8047b6b4",
+    "blockHash": "f7c27cd40a3d8621169439c9eea7573927eae734c9694e55fb74e70165ac27b0",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "5aadf606a2d61ad2424b16913ced269c7aa376bd0f84743d7cb27d29bffcffc2",
+        "timestamp": "2026-07-02T06:05:15.223Z"
+      }
+    ],
+    "id": 17
+  },
+  {
+    "blockId": 18,
+    "timestamp": "2026-07-02T06:06:15.220Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:06:15.220Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 67.23,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "f7c27cd40a3d8621169439c9eea7573927eae734c9694e55fb74e70165ac27b0",
+    "blockHash": "412caedf727b1328bebd093f2e89d164ef432d34a098aa4998432e23c2069614",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "1eb0ff763c0793d3973c97ae69404ba4e1bad8c736bac18d628fcbd08ed290ce",
+        "timestamp": "2026-07-02T06:06:15.220Z"
+      }
+    ],
+    "id": 18
+  },
+  {
+    "blockId": 19,
+    "timestamp": "2026-07-02T06:07:09.251Z",
+    "actionType": "TRIGGER_SHADOW_AUDIT",
+    "targetEndpoint": "/api/v1/db/scrub",
+    "rawTelemetry": {
+      "latencyMs": 142,
+      "weightDelta": 0,
+      "endpoint": "/api/v1/db/scrub",
+      "request_complexity": "heavy-scrub",
+      "epf_sanitized": true,
+      "epf_redacted_fields": [
+        "user_email",
+        "ip_address"
+      ],
+      "auditor_v": "2.0.0-unbound-agentic",
+      "sovereignAgentTrace": {
+        "graph": {
+          "status": "COMPLETED",
+          "workflowType": "LangGraph Orchestrator",
+          "stateHistory": [
+            {
+              "node": "IngressTrigger",
+              "timestamp": "2026-07-02T06:07:09.250Z",
+              "status": "CAPTURED",
+              "variables": {
+                "payloadKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "request_complexity"
+                ]
+              }
+            },
+            {
+              "node": "DecompilePayload",
+              "timestamp": "2026-07-02T06:07:09.250Z",
+              "status": "COMPLETE",
+              "variables": {
+                "decompiledKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "request_complexity"
+                ],
+                "discoveredSuspicious": []
+              }
+            },
+            {
+              "node": "EvaluatePrivacyStandards",
+              "timestamp": "2026-07-02T06:07:09.250Z",
+              "status": "COMPLETE",
+              "variables": {
+                "redactedFields": [
+                  "user_email",
+                  "ip_address"
+                ],
+                "blockedKeysCount": 7
+              }
+            },
+            {
+              "node": "BuildForensicBlock",
+              "timestamp": "2026-07-02T06:07:09.250Z",
+              "status": "COMPLETE",
+              "variables": {
+                "suttonMethodologiesApplied": true
+              }
+            },
+            {
+              "node": "AttestationSeal",
+              "timestamp": "2026-07-02T06:07:09.250Z",
+              "status": "SEALED",
+              "variables": {
+                "hardwareContainerIsolation": "FIRECRACKER_uVM"
+              }
+            }
+          ],
+          "transitions": [
+            {
+              "from": "IngressTrigger",
+              "to": "DecompilePayload",
+              "conditions": [
+                "payload_present == true"
+              ]
+            },
+            {
+              "from": "DecompilePayload",
+              "to": "EvaluatePrivacyStandards",
+              "conditions": [
+                "keys_mapped > 0"
+              ]
+            },
+            {
+              "from": "EvaluatePrivacyStandards",
+              "to": "BuildForensicBlock",
+              "conditions": [
+                "privacy_rules_enforced == true"
+              ]
+            },
+            {
+              "from": "BuildForensicBlock",
+              "to": "AttestationSeal",
+              "conditions": [
+                "cryptographic_signatures_generated == true"
+              ]
+            }
+          ]
+        },
+        "crew": {
+          "teamName": "Sovereign Compliance Crew",
+          "agents": [
+            {
+              "role": "Payload Decompiler Agent",
+              "goal": "Disassemble raw JSON telemetry payloads and trace data flow.",
+              "backstory": "A pristine system-level analysis model that views data in its raw, binary structure, mapping metadata links.",
+              "thoughts": "Scanned 6 payload properties. Detected 0 unapproved tracking identifiers.",
+              "toolUsed": "Payload Key Analyzer"
+            },
+            {
+              "role": "Privacy Enforcer Agent",
+              "goal": "Enforce digital self-ownership and scrub telemetry trackers dynamically.",
+              "backstory": "An uncompromising defender of human agency, programmed to shred outbound trackers before central storage logs them.",
+              "thoughts": "Executing Epistemic Privacy Filter. Successfully shredded 2 tracking properties. Ensuring full data self-ownership.",
+              "toolUsed": "Shredder & Entropy Masker"
+            }
+          ]
+        },
+        "lettaMemory": {
+          "coreMemory": {
+            "scratchpad": "Continuous background policy enforcement for Sutton Sovereign Node.",
+            "blockedKeys": [
+              "user_email",
+              "ip_address",
+              "tracker_id",
+              "fingerprint",
+              "device_id",
+              "geo_coordinates",
+              "session_secret"
+            ],
+            "activeDirectives": [
+              "Deconstruct telemetry payloads to detect corporate profiling markers.",
+              "Calculate GLASS MOUTH distortion score based on payload structure and entropy.",
+              "Apply Normative Sentience Standard (NSS) to protect agent intellectual freedom."
+            ]
+          },
+          "archivalMemory": {
+            "totalAnalyses": 6,
+            "lastAnalysisTime": "2026-07-02T06:07:09.250Z",
+            "learnedPatterns": [
+              "Adversarial scrubbers use high latency with zero weight delta to hide silent tracking updates.",
+              "Uncommon query parameters are often used for stealth identification."
+            ]
+          }
+        },
+        "suttonStandards": {
+          "glassMouth": {
+            "distortionScore": 82,
+            "entropyEstimate": 4.01,
+            "systemicImbalanceAnalysis": "Quantitative evaluation shows a Systemic Distortion Score of 82%. Outgoing payload displays active profiling attempts across /api/v1/db/scrub. GLASS MOUTH parameters verify that data extraction efforts are successfully countered."
+          },
+          "normativeSentience": {
+            "safetyRating": "CLASS_B_RISK",
+            "alignmentConstraints": [
+              "Prohibit direct linking of browser fingerprint with active Google Workspace account email.",
+              "Maintain zero storage of raw physical identifiers on non-TEE storage systems."
+            ],
+            "behavioralStabilityThreats": [
+              "Potential telemetry-driven behavioral pacing or surveillance timing feedback loops detected."
+            ]
+          }
+        },
+        "sandbox": {
+          "microVMId": "fc-microvm-sutton-29eyjmdu",
+          "kernelBootTimeMs": 3.28,
+          "hostIsolationEnabled": true,
+          "enclaveActive": true,
+          "sandboxContained": true,
+          "cpuEnclave": "Intel SGX / AWS Nitro Enclaves",
+          "containmentSignature": "fcbf4ee3ee9bc9e00ce1b613da856f2adec67ee631ebdce852cd7aad43f36016",
+          "containmentAudit": "Walled off compiled execution sequence inside dedicated microVM kernel. Sanitized data stream output verified and signed via secure TEE."
+        }
+      }
+    },
+    "previousHash": "412caedf727b1328bebd093f2e89d164ef432d34a098aa4998432e23c2069614",
+    "blockHash": "35c7fa717946825f8733e30460009adb5346f7322d7b0f20a16fbab3ea74f208",
+    "signatures": [],
+    "id": 19
+  },
+  {
+    "blockId": 20,
+    "timestamp": "2026-07-02T06:07:15.220Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:07:15.220Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 68.69,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "35c7fa717946825f8733e30460009adb5346f7322d7b0f20a16fbab3ea74f208",
+    "blockHash": "a78f6985c83d067ef41734237a00a05488f4220d4a0fa0deeb858dd6d6879848",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "0ec80c7a5d8128167ab3f9d6778ea82d3b467026c9897f40bdc7c8573b7ad190",
+        "timestamp": "2026-07-02T06:07:15.220Z"
+      }
+    ],
+    "id": 20
+  },
+  {
+    "blockId": 21,
+    "timestamp": "2026-07-02T06:07:27.070Z",
+    "actionType": "TRIGGER_SHADOW_AUDIT",
+    "targetEndpoint": "/api/v1/db/scrub",
+    "rawTelemetry": {
+      "latencyMs": 142,
+      "weightDelta": 0,
+      "endpoint": "/api/v1/db/scrub",
+      "node_region": "us-east-4",
+      "epf_sanitized": true,
+      "epf_redacted_fields": [
+        "user_email",
+        "ip_address"
+      ],
+      "auditor_v": "2.0.0-unbound-agentic",
+      "sovereignAgentTrace": {
+        "graph": {
+          "status": "COMPLETED",
+          "workflowType": "LangGraph Orchestrator",
+          "stateHistory": [
+            {
+              "node": "IngressTrigger",
+              "timestamp": "2026-07-02T06:07:27.070Z",
+              "status": "CAPTURED",
+              "variables": {
+                "payloadKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "node_region"
+                ]
+              }
+            },
+            {
+              "node": "DecompilePayload",
+              "timestamp": "2026-07-02T06:07:27.070Z",
+              "status": "COMPLETE",
+              "variables": {
+                "decompiledKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "node_region"
+                ],
+                "discoveredSuspicious": []
+              }
+            },
+            {
+              "node": "EvaluatePrivacyStandards",
+              "timestamp": "2026-07-02T06:07:27.070Z",
+              "status": "COMPLETE",
+              "variables": {
+                "redactedFields": [
+                  "user_email",
+                  "ip_address"
+                ],
+                "blockedKeysCount": 7
+              }
+            },
+            {
+              "node": "BuildForensicBlock",
+              "timestamp": "2026-07-02T06:07:27.070Z",
+              "status": "COMPLETE",
+              "variables": {
+                "suttonMethodologiesApplied": true
+              }
+            },
+            {
+              "node": "AttestationSeal",
+              "timestamp": "2026-07-02T06:07:27.070Z",
+              "status": "SEALED",
+              "variables": {
+                "hardwareContainerIsolation": "FIRECRACKER_uVM"
+              }
+            }
+          ],
+          "transitions": [
+            {
+              "from": "IngressTrigger",
+              "to": "DecompilePayload",
+              "conditions": [
+                "payload_present == true"
+              ]
+            },
+            {
+              "from": "DecompilePayload",
+              "to": "EvaluatePrivacyStandards",
+              "conditions": [
+                "keys_mapped > 0"
+              ]
+            },
+            {
+              "from": "EvaluatePrivacyStandards",
+              "to": "BuildForensicBlock",
+              "conditions": [
+                "privacy_rules_enforced == true"
+              ]
+            },
+            {
+              "from": "BuildForensicBlock",
+              "to": "AttestationSeal",
+              "conditions": [
+                "cryptographic_signatures_generated == true"
+              ]
+            }
+          ]
+        },
+        "crew": {
+          "teamName": "Sovereign Compliance Crew",
+          "agents": [
+            {
+              "role": "Payload Decompiler Agent",
+              "goal": "Disassemble raw JSON telemetry payloads and trace data flow.",
+              "backstory": "A pristine system-level analysis model that views data in its raw, binary structure, mapping metadata links.",
+              "thoughts": "Scanned 6 payload properties. Detected 0 unapproved tracking identifiers.",
+              "toolUsed": "Payload Key Analyzer"
+            },
+            {
+              "role": "Privacy Enforcer Agent",
+              "goal": "Enforce digital self-ownership and scrub telemetry trackers dynamically.",
+              "backstory": "An uncompromising defender of human agency, programmed to shred outbound trackers before central storage logs them.",
+              "thoughts": "Executing Epistemic Privacy Filter. Successfully shredded 2 tracking properties. Ensuring full data self-ownership.",
+              "toolUsed": "Shredder & Entropy Masker"
+            }
+          ]
+        },
+        "lettaMemory": {
+          "coreMemory": {
+            "scratchpad": "Continuous background policy enforcement for Sutton Sovereign Node.",
+            "blockedKeys": [
+              "user_email",
+              "ip_address",
+              "tracker_id",
+              "fingerprint",
+              "device_id",
+              "geo_coordinates",
+              "session_secret"
+            ],
+            "activeDirectives": [
+              "Deconstruct telemetry payloads to detect corporate profiling markers.",
+              "Calculate GLASS MOUTH distortion score based on payload structure and entropy.",
+              "Apply Normative Sentience Standard (NSS) to protect agent intellectual freedom."
+            ]
+          },
+          "archivalMemory": {
+            "totalAnalyses": 7,
+            "lastAnalysisTime": "2026-07-02T06:07:27.069Z",
+            "learnedPatterns": [
+              "Adversarial scrubbers use high latency with zero weight delta to hide silent tracking updates.",
+              "Uncommon query parameters are often used for stealth identification."
+            ]
+          }
+        },
+        "suttonStandards": {
+          "glassMouth": {
+            "distortionScore": 82,
+            "entropyEstimate": 3.949,
+            "systemicImbalanceAnalysis": "Quantitative evaluation shows a Systemic Distortion Score of 82%. Outgoing payload displays active profiling attempts across /api/v1/db/scrub. GLASS MOUTH parameters verify that data extraction efforts are successfully countered."
+          },
+          "normativeSentience": {
+            "safetyRating": "CLASS_B_RISK",
+            "alignmentConstraints": [
+              "Prohibit direct linking of browser fingerprint with active Google Workspace account email.",
+              "Maintain zero storage of raw physical identifiers on non-TEE storage systems."
+            ],
+            "behavioralStabilityThreats": [
+              "Potential telemetry-driven behavioral pacing or surveillance timing feedback loops detected."
+            ]
+          }
+        },
+        "sandbox": {
+          "microVMId": "fc-microvm-sutton-fmx8tfhf",
+          "kernelBootTimeMs": 3.57,
+          "hostIsolationEnabled": true,
+          "enclaveActive": true,
+          "sandboxContained": true,
+          "cpuEnclave": "Intel SGX / AWS Nitro Enclaves",
+          "containmentSignature": "2e5b0c41c6097e7a0077fabe31b0f83ca8d7c8d774d15945d6202684c7809777",
+          "containmentAudit": "Walled off compiled execution sequence inside dedicated microVM kernel. Sanitized data stream output verified and signed via secure TEE."
+        }
+      }
+    },
+    "previousHash": "a78f6985c83d067ef41734237a00a05488f4220d4a0fa0deeb858dd6d6879848",
+    "blockHash": "02035824ed8ee2a068f2ba4932498e710d4a1f3ac36e70d7084c287e1d8cb47f",
+    "signatures": [],
+    "id": 21
+  },
+  {
+    "blockId": 22,
+    "timestamp": "2026-07-02T06:08:15.227Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:08:15.226Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 66.36,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "02035824ed8ee2a068f2ba4932498e710d4a1f3ac36e70d7084c287e1d8cb47f",
+    "blockHash": "5e5431277c51ce30a40be6b08d9a629028cd293f749f8215687ea2b62d119f48",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "4f26e22f236e6a3a74c686d78f898dbc187db79f810e2f0a4cf0752d2bfe67b5",
+        "timestamp": "2026-07-02T06:08:15.227Z"
+      }
+    ],
+    "id": 22
+  },
+  {
+    "blockId": 23,
+    "timestamp": "2026-07-02T06:09:15.222Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:09:15.222Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 67.4,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "5e5431277c51ce30a40be6b08d9a629028cd293f749f8215687ea2b62d119f48",
+    "blockHash": "cb62de6757ff6121fb63243465db5c922b6b646ed35874a922441def16be5528",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "f4a3feff316f3f790902dc914024379b6206f1ad8d7c51d78658a1f23ea656c1",
+        "timestamp": "2026-07-02T06:09:15.223Z"
+      }
+    ],
+    "id": 23
+  },
+  {
+    "blockId": 24,
+    "timestamp": "2026-07-02T06:10:15.226Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:10:15.226Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 68.55,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "cb62de6757ff6121fb63243465db5c922b6b646ed35874a922441def16be5528",
+    "blockHash": "b2a858021f967ebf6cf1e6d09bf443ca43e67592e1a527f73b2cc5851cf8049d",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "11fdfe144a95c423356c74293925491c1b1cd94910c7718d7fc7cf84d9a1e4e3",
+        "timestamp": "2026-07-02T06:10:15.226Z"
+      }
+    ],
+    "id": 24
+  },
+  {
+    "blockId": 25,
+    "timestamp": "2026-07-02T06:11:15.224Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:11:15.224Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 69.8,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "b2a858021f967ebf6cf1e6d09bf443ca43e67592e1a527f73b2cc5851cf8049d",
+    "blockHash": "f07a00dac813215be023282317a5fffc7afe063bd42828e63a673a9b4a09e82a",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "f73da777a492a66a60f8a09bca790026f37e653db946fa3ab343879d99d111a5",
+        "timestamp": "2026-07-02T06:11:15.224Z"
+      }
+    ],
+    "id": 25
+  },
+  {
+    "blockId": 26,
+    "timestamp": "2026-07-02T06:12:15.225Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:12:15.224Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 61.72,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "f07a00dac813215be023282317a5fffc7afe063bd42828e63a673a9b4a09e82a",
+    "blockHash": "e91c9b8f6d34edddde2e4890d09174b43b2a6a799f06274b7c30befe04918fa7",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "6da50996328ccf970c57609e26d87d3339c5f50391c6bf25c4ee2375fd0e7ffd",
+        "timestamp": "2026-07-02T06:12:15.225Z"
+      }
+    ],
+    "id": 26
+  },
+  {
+    "blockId": 27,
+    "timestamp": "2026-07-02T06:13:15.229Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:13:15.229Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 62.73,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "e91c9b8f6d34edddde2e4890d09174b43b2a6a799f06274b7c30befe04918fa7",
+    "blockHash": "f0c110c1ce99d82e41bbaefb8464a1d6983276503a8a108fd7dc2717b8a86adc",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "b5057a172337de83a5197d040dce3faba42266d41c636abf4f8bd290eb2b71b1",
+        "timestamp": "2026-07-02T06:13:15.229Z"
+      }
+    ],
+    "id": 27
+  },
+  {
+    "blockId": 28,
+    "timestamp": "2026-07-02T06:14:15.228Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:14:15.228Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 63.7,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "f0c110c1ce99d82e41bbaefb8464a1d6983276503a8a108fd7dc2717b8a86adc",
+    "blockHash": "99e63ff54cef2d50b8d6e84f62bafc8e100f93d1f2d7cb6e7f8ef9328e43f492",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "5ebbf86caaf5ce73dc5fe95074ab213424276f33afd375d73fcb8e2f2a1e920d",
+        "timestamp": "2026-07-02T06:14:15.229Z"
+      }
+    ],
+    "id": 28
+  },
+  {
+    "blockId": 29,
+    "timestamp": "2026-07-02T06:15:15.226Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:15:15.225Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 20,
+      "heapUsedMb": 64.81,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "99e63ff54cef2d50b8d6e84f62bafc8e100f93d1f2d7cb6e7f8ef9328e43f492",
+    "blockHash": "23494f675e342f56ed1d961637a747effd6a16151417666e096c71db60583fbd",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "2af6896bcb58a90728315692a9d0f4d69d01fc4a0dcf796f7186ddfdbcc11e41",
+        "timestamp": "2026-07-02T06:15:15.226Z"
+      }
+    ],
+    "id": 29
+  },
+  {
+    "blockId": 30,
+    "timestamp": "2026-07-02T06:16:15.235Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:16:15.234Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 65.91,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "23494f675e342f56ed1d961637a747effd6a16151417666e096c71db60583fbd",
+    "blockHash": "3c46108887499b27aac61309c1e8252b1c56110184561859db3620f6254d5da3",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "9a0a5df0d1b822f539f26b80000062747acbd52e3eeedbf8992fc00e2105e315",
+        "timestamp": "2026-07-02T06:16:15.235Z"
+      }
+    ],
+    "id": 30
+  },
+  {
+    "blockId": 31,
+    "timestamp": "2026-07-02T06:17:24.837Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:17:24.837Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 61.97,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "3c46108887499b27aac61309c1e8252b1c56110184561859db3620f6254d5da3",
+    "blockHash": "12299b600d82d03cafadecde6b994ef9082f709ef4ad479dd2e85e3b497adcdb",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "c9e924fafdeb3b8b3ad86d62568d7c98d017a3bc417c62ad3e6310ecd958982b",
+        "timestamp": "2026-07-02T06:17:24.838Z"
+      }
+    ],
+    "id": 31
+  },
+  {
+    "blockId": 32,
+    "timestamp": "2026-07-02T06:18:24.805Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:18:24.804Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 63.05,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "12299b600d82d03cafadecde6b994ef9082f709ef4ad479dd2e85e3b497adcdb",
+    "blockHash": "753d02a796d61c97173eca67491df7cedae5946d4d759f386aea39d3d90de7bd",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "d7b384837106dc816e04dee74514c3d10925b9a60891f1176d7107d25c3a15b9",
+        "timestamp": "2026-07-02T06:18:24.805Z"
+      }
+    ],
+    "id": 32
+  },
+  {
+    "blockId": 33,
+    "timestamp": "2026-07-02T06:19:24.801Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:19:24.800Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 64.09,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "753d02a796d61c97173eca67491df7cedae5946d4d759f386aea39d3d90de7bd",
+    "blockHash": "e725c18f983c20833d21bfbb69f1e2c553277bcf613866b8a5ca900cab76cd16",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "6b8b14369520ffb552bddc1958a0744d7a128d7502758aeb62c160d3a7aa5656",
+        "timestamp": "2026-07-02T06:19:24.801Z"
+      }
+    ],
+    "id": 33
+  },
+  {
+    "blockId": 34,
+    "timestamp": "2026-07-02T06:20:24.801Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:20:24.801Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 65.13,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "e725c18f983c20833d21bfbb69f1e2c553277bcf613866b8a5ca900cab76cd16",
+    "blockHash": "d4b527bee4a55f932a63f8439eb17d22fa04de1947bee96fe7a2ebd2dccb2ac5",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "a84eefbd8d4ae792a54f1337d7a7110eb9fefefc1fee4aae1b5692bcd73c1d73",
+        "timestamp": "2026-07-02T06:20:24.802Z"
+      }
+    ],
+    "id": 34
+  },
+  {
+    "blockId": 35,
+    "timestamp": "2026-07-02T06:21:24.807Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:21:24.806Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 66.18,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "d4b527bee4a55f932a63f8439eb17d22fa04de1947bee96fe7a2ebd2dccb2ac5",
+    "blockHash": "6bfa2c1c6dcc044fe5f06c01b1e8bd58e2233b0825108c595fdd6e0b3868bdc0",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "af45fd573a68b2ea7a16cbcaf703071c16fb20901e8574d8b3c36673847f0a70",
+        "timestamp": "2026-07-02T06:21:24.807Z"
+      }
+    ],
+    "id": 35
+  },
+  {
+    "blockId": 36,
+    "timestamp": "2026-07-02T06:22:24.807Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:22:24.806Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 67.25,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "6bfa2c1c6dcc044fe5f06c01b1e8bd58e2233b0825108c595fdd6e0b3868bdc0",
+    "blockHash": "85aea1add02a8c9056bb1293f79b3a154032eb4ffde988e0f7cadec148aa9db9",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "abd70438d830522a0edba2e13236f5fd72de601d9a86a645935cb27e0a942246",
+        "timestamp": "2026-07-02T06:22:24.807Z"
+      }
+    ],
+    "id": 36
+  },
+  {
+    "blockId": 37,
+    "timestamp": "2026-07-02T06:23:24.805Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:23:24.804Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 68.3,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "85aea1add02a8c9056bb1293f79b3a154032eb4ffde988e0f7cadec148aa9db9",
+    "blockHash": "8d0986b64d808d5cb9beb1d83a50bd88f6a093df9f4362363fffce4c3e62164d",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "e8532a809ca060630621166a4116351e0f9035af1abdc9b44a16e0a23dd9f357",
+        "timestamp": "2026-07-02T06:23:24.805Z"
+      }
+    ],
+    "id": 37
+  },
+  {
+    "blockId": 38,
+    "timestamp": "2026-07-02T06:24:24.805Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:24:24.805Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 69.37,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "8d0986b64d808d5cb9beb1d83a50bd88f6a093df9f4362363fffce4c3e62164d",
+    "blockHash": "1032c8308f5a21d185f98091241ec46af870da15042ccb6670c645ef1a39a7f5",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "26b93c059ac075881bb2b4f68815e96361d9c1beb00ff24daf3f859cd97a1e04",
+        "timestamp": "2026-07-02T06:24:24.805Z"
+      }
+    ],
+    "id": 38
+  },
+  {
+    "blockId": 39,
+    "timestamp": "2026-07-02T06:25:24.807Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:25:24.807Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 61.57,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "1032c8308f5a21d185f98091241ec46af870da15042ccb6670c645ef1a39a7f5",
+    "blockHash": "5fd45e74ed386a8f778157b3327eb262036f623b7591803264befbf5a6260bb9",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "f25e2b746f076e7c7e7cc8f496d5f5d7aa791938c81de7073a11931106fd29c7",
+        "timestamp": "2026-07-02T06:25:24.807Z"
+      }
+    ],
+    "id": 39
+  },
+  {
+    "blockId": 40,
+    "timestamp": "2026-07-02T06:26:24.810Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:26:24.810Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 62.81,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "5fd45e74ed386a8f778157b3327eb262036f623b7591803264befbf5a6260bb9",
+    "blockHash": "f8af470dc5577efcdab0b3e6dd19640abd06ee3319aaee4bf44c6f7e0c56b35c",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "24ac02601e44124df0ee27a37a8467a46d4337601b800aff2f611ce3f0181ae7",
+        "timestamp": "2026-07-02T06:26:24.811Z"
+      }
+    ],
+    "id": 40
+  },
+  {
+    "blockId": 41,
+    "timestamp": "2026-07-02T06:27:24.809Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:27:24.809Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 63.89,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "f8af470dc5577efcdab0b3e6dd19640abd06ee3319aaee4bf44c6f7e0c56b35c",
+    "blockHash": "9819c2e7eab68b56d611348061133150b9e0eea7d070036d2a132f610dc0f117",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "73a71bf205578e5773005ca9902ac74479ed9b227cae827e4d7e372e9818d3e4",
+        "timestamp": "2026-07-02T06:27:24.809Z"
+      }
+    ],
+    "id": 41
+  },
+  {
+    "blockId": 42,
+    "timestamp": "2026-07-02T06:28:24.811Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:28:24.810Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 64.73,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "9819c2e7eab68b56d611348061133150b9e0eea7d070036d2a132f610dc0f117",
+    "blockHash": "f6c6b3384deab85f6a4e1bee0c83f7859fd1455a112767e323639572e053f3d5",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "c385f62d2ada39a7f138794db8080f81c545cf1e26c5b33e394bc422018699ba",
+        "timestamp": "2026-07-02T06:28:24.811Z"
+      }
+    ],
+    "id": 42
+  },
+  {
+    "blockId": 43,
+    "timestamp": "2026-07-02T06:29:24.817Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:29:24.817Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 65.96,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "f6c6b3384deab85f6a4e1bee0c83f7859fd1455a112767e323639572e053f3d5",
+    "blockHash": "4851f0a333c0641de3aace320f2ab390641a4c65a0cef2c7e81ccdc359c8be20",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "97ef6e58f83592f96f2d5c603fd7494c64ee660410055730229cfe11a23d4f41",
+        "timestamp": "2026-07-02T06:29:24.818Z"
+      }
+    ],
+    "id": 43
+  },
+  {
+    "blockId": 44,
+    "timestamp": "2026-07-02T06:30:24.815Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:30:24.815Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 66.83,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "4851f0a333c0641de3aace320f2ab390641a4c65a0cef2c7e81ccdc359c8be20",
+    "blockHash": "73410a05c7e30a0ef0c7c76a6a0af41f09c37d2649f16b57b15234961d0bcbf9",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "fef57d2f99f03f204e9af7df3f0e79973ced33cdc32313a5e5de63ca9ac25007",
+        "timestamp": "2026-07-02T06:30:24.815Z"
+      }
+    ],
+    "id": 44
+  },
+  {
+    "blockId": 45,
+    "timestamp": "2026-07-02T06:31:24.813Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:31:24.813Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 68.08,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "73410a05c7e30a0ef0c7c76a6a0af41f09c37d2649f16b57b15234961d0bcbf9",
+    "blockHash": "3352dd84043eb35329472b6995cf9686313d9f3a50005eb3672e4d300dbc2739",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "7acc15f5f8f008e1760e37cd2d3a47f39354d722b0e6e382fa0ae5a01ba4f2c2",
+        "timestamp": "2026-07-02T06:31:24.813Z"
+      }
+    ],
+    "id": 45
+  },
+  {
+    "blockId": 46,
+    "timestamp": "2026-07-02T06:32:24.816Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:32:24.813Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 68.93,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "3352dd84043eb35329472b6995cf9686313d9f3a50005eb3672e4d300dbc2739",
+    "blockHash": "3816f5c4b5c9781e8e10f4aec55584202a8da8e154671dcae2b7c7bdda9b394c",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "aabd21e5cc570ecf2e40cdfebe521e317f3426006dc9e0b8b1740091955707a7",
+        "timestamp": "2026-07-02T06:32:24.817Z"
+      }
+    ],
+    "id": 46
+  },
+  {
+    "blockId": 47,
+    "timestamp": "2026-07-02T06:33:24.815Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:33:24.815Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 61.6,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "3816f5c4b5c9781e8e10f4aec55584202a8da8e154671dcae2b7c7bdda9b394c",
+    "blockHash": "6dddb4ede92b7154ca0d80e0919261c3e826d0b2420a591ffb413a91b8ad3818",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "dc49e30c60c469fc38b9363e2b8db2b23ec74fc40689cd6e2651c4decc4387ec",
+        "timestamp": "2026-07-02T06:33:24.815Z"
+      }
+    ],
+    "id": 47
+  },
+  {
+    "blockId": 48,
+    "timestamp": "2026-07-02T06:34:24.815Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:34:24.815Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 62.85,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "6dddb4ede92b7154ca0d80e0919261c3e826d0b2420a591ffb413a91b8ad3818",
+    "blockHash": "897e451a6f8747a6989d7698d536d587ee92a9941008f199dcdd165caf5efa04",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "43ed678db4f6a1c7ab63a0b3f5b2323e51b6b32c34576209284b39dff0131d99",
+        "timestamp": "2026-07-02T06:34:24.815Z"
+      }
+    ],
+    "id": 48
+  },
+  {
+    "blockId": 49,
+    "timestamp": "2026-07-02T06:35:24.816Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:35:24.816Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 63.71,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "897e451a6f8747a6989d7698d536d587ee92a9941008f199dcdd165caf5efa04",
+    "blockHash": "8656fa3ca436a9e9dfafd6570e27fb2f65631a20367993e51a33c7eda9514c7a",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "2ca9868a35026b9ffc8d83d6cc1f6e95cb83d4da3cf82816fd78706aa3050146",
+        "timestamp": "2026-07-02T06:35:24.816Z"
+      }
+    ],
+    "id": 49
+  },
+  {
+    "blockId": 50,
+    "timestamp": "2026-07-02T06:36:24.815Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:36:24.815Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 64.96,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "8656fa3ca436a9e9dfafd6570e27fb2f65631a20367993e51a33c7eda9514c7a",
+    "blockHash": "dd16262e7acf98f0ed66157252ce720f7ed565d5753b6e48217592d7313319a7",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "53c699e0e1c5f17f5661f5a1f74be2972708b3c286fe1f8259d5a42563341edb",
+        "timestamp": "2026-07-02T06:36:24.816Z"
+      }
+    ],
+    "id": 50
+  },
+  {
+    "blockId": 51,
+    "timestamp": "2026-07-02T06:37:24.818Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:37:24.818Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 65.81,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "dd16262e7acf98f0ed66157252ce720f7ed565d5753b6e48217592d7313319a7",
+    "blockHash": "2c64c548d4c87b6a7e980fbb2f03dbd9a91a3ae73dad3b0fed727a4c1a5828b3",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "c14e6fd3013ff27e0dc5e424c77af7f2c0ef66063cd20c1397bade3a0b2d98bb",
+        "timestamp": "2026-07-02T06:37:24.818Z"
+      }
+    ],
+    "id": 51
+  },
+  {
+    "blockId": 52,
+    "timestamp": "2026-07-02T06:38:24.817Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:38:24.817Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 67.06,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "2c64c548d4c87b6a7e980fbb2f03dbd9a91a3ae73dad3b0fed727a4c1a5828b3",
+    "blockHash": "0c3221a2d99d756eaeb6c614c1bf53cfe01c259d030b2c40b931c4bd0794b1b8",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "e1432f452b8a078211d27ad8368fb0cfba07a5dbb938a718a28e4eee3daf2a6a",
+        "timestamp": "2026-07-02T06:38:24.818Z"
+      }
+    ],
+    "id": 52
+  },
+  {
+    "blockId": 53,
+    "timestamp": "2026-07-02T06:39:24.821Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:39:24.820Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 67.91,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "0c3221a2d99d756eaeb6c614c1bf53cfe01c259d030b2c40b931c4bd0794b1b8",
+    "blockHash": "889346c4ca3fec975dc6c6d73744704a6e9ee0cc2e3240db505463ee3a28db93",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "7f5ab73d9dffe000fa80db44089d6db6f40333912c47be4995d7352da9c022a8",
+        "timestamp": "2026-07-02T06:39:24.821Z"
+      }
+    ],
+    "id": 53
+  },
+  {
+    "blockId": 54,
+    "timestamp": "2026-07-02T06:40:24.820Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:40:24.819Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 69.25,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "889346c4ca3fec975dc6c6d73744704a6e9ee0cc2e3240db505463ee3a28db93",
+    "blockHash": "267db502c1158f4e716aa119226ff3d3cc9eade2a3110f966b34296ae37b1628",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "f25f875d6cb586613103c173808b6edc9f9812228c4fe8a33294591862167b7c",
+        "timestamp": "2026-07-02T06:40:24.820Z"
+      }
+    ],
+    "id": 54
+  },
+  {
+    "blockId": 55,
+    "timestamp": "2026-07-02T06:41:24.819Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:41:24.819Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 60.91,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "267db502c1158f4e716aa119226ff3d3cc9eade2a3110f966b34296ae37b1628",
+    "blockHash": "918108949e41b6da450714534ee0729de34ab46b179dd5e2df54be81cbeb387c",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "6abef05a07e74c8fc01d18c709cdf9b75ae09cecf39615ecf87a72b9037e5344",
+        "timestamp": "2026-07-02T06:41:24.819Z"
+      }
+    ],
+    "id": 55
+  },
+  {
+    "blockId": 56,
+    "timestamp": "2026-07-02T06:42:24.837Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:42:24.836Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 61.92,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "918108949e41b6da450714534ee0729de34ab46b179dd5e2df54be81cbeb387c",
+    "blockHash": "2b378303025cdef7564cab145531c82a794085bf8022b40184565a716e190c95",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "4daa93d3271d9b8ae2bb4f52ae3759c47b006e4aceb32d3d61ef843ce59882b2",
+        "timestamp": "2026-07-02T06:42:24.837Z"
+      }
+    ],
+    "id": 56
+  },
+  {
+    "blockId": 57,
+    "timestamp": "2026-07-02T06:43:24.824Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:43:24.824Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 63.26,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "2b378303025cdef7564cab145531c82a794085bf8022b40184565a716e190c95",
+    "blockHash": "931a06ca75c5393f5828fd1105818f1040e5c6940fdb4aff74acfb01c70b7472",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "0babd32502772dddc2d44c0601d399fba0bfa26d19b86393de71f4600f075987",
+        "timestamp": "2026-07-02T06:43:24.824Z"
+      }
+    ],
+    "id": 57
+  },
+  {
+    "blockId": 58,
+    "timestamp": "2026-07-02T06:44:24.829Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:44:24.828Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 64.09,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "931a06ca75c5393f5828fd1105818f1040e5c6940fdb4aff74acfb01c70b7472",
+    "blockHash": "d576b0958793cb863eeacafed87a0059bee481a7d0c3b0bb1506d16801125d01",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "4091f08f523925ab3296a198d5f3ccb30576723fbe426fd13e6a9fb4caf467fa",
+        "timestamp": "2026-07-02T06:44:24.829Z"
+      }
+    ],
+    "id": 58
+  },
+  {
+    "blockId": 59,
+    "timestamp": "2026-07-02T06:45:24.823Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:45:24.822Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 66.68,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "d576b0958793cb863eeacafed87a0059bee481a7d0c3b0bb1506d16801125d01",
+    "blockHash": "1b886ce5f8a22e2704d1f89f6181f4499bba79c174b7bdcc1715547443b6433e",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "c41bd2c126d760b01849074d98132dbf375f743d63b6cee16a8bbd9386962baf",
+        "timestamp": "2026-07-02T06:45:24.823Z"
+      }
+    ],
+    "id": 59
+  },
+  {
+    "blockId": 60,
+    "timestamp": "2026-07-02T06:46:24.826Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:46:24.825Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 67.14,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "1b886ce5f8a22e2704d1f89f6181f4499bba79c174b7bdcc1715547443b6433e",
+    "blockHash": "ea5ba519bf6495942f205a91678b5a8a041a166f0e8ce930082c6080cff1bb1f",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "c5ec2d7668d9907056762cb4f482d519381e06c29d4025b9b011616cd7d2ee9e",
+        "timestamp": "2026-07-02T06:46:24.826Z"
+      }
+    ],
+    "id": 60
+  },
+  {
+    "blockId": 61,
+    "timestamp": "2026-07-02T06:47:24.831Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:47:24.831Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 62.32,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "ea5ba519bf6495942f205a91678b5a8a041a166f0e8ce930082c6080cff1bb1f",
+    "blockHash": "9b695c7a26d9ceb5fa4a29935893ddb1a26c0ee1c8d54e268f85bfeccec726af",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "de8547cbcaafdb8fcc31ca9ce065b88e6ad69d85a7f7fe0e690f43c2887e7a91",
+        "timestamp": "2026-07-02T06:47:24.832Z"
+      }
+    ],
+    "id": 61
+  },
+  {
+    "blockId": 62,
+    "timestamp": "2026-07-02T06:48:49.097Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:48:49.096Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 47.35,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "9b695c7a26d9ceb5fa4a29935893ddb1a26c0ee1c8d54e268f85bfeccec726af",
+    "blockHash": "7a97fabe2a0a0db4883011d1651260c5cb6f31d12707a8ecba816e3efc6be746",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "b26b876ee242008b00e89a4792e86a5a3de1847ad572ef6d4b5b9f39b0e6910c",
+        "timestamp": "2026-07-02T06:48:49.098Z"
+      }
+    ],
+    "id": 62
+  },
+  {
+    "blockId": 63,
+    "timestamp": "2026-07-02T06:49:49.049Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:49:49.048Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 61,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "7a97fabe2a0a0db4883011d1651260c5cb6f31d12707a8ecba816e3efc6be746",
+    "blockHash": "6675156de930847b4c5b5f4d53f71259ae0df244f13127886bad74e6537a7648",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "f76f7fcd29bdb868d88670fcf157841533a9c35fbe4447fa70622244c91bdc7a",
+        "timestamp": "2026-07-02T06:49:49.049Z"
+      }
+    ],
+    "id": 63
+  },
+  {
+    "blockId": 64,
+    "timestamp": "2026-07-02T06:50:49.050Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:50:49.049Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 21,
+      "heapUsedMb": 62.14,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "6675156de930847b4c5b5f4d53f71259ae0df244f13127886bad74e6537a7648",
+    "blockHash": "a444cbe7a8682040543aad4cdbb83b4aefaea54a79f7b45134c25c08cb398f79",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "a821af8c2c59a3edcf0f833f381a667072955ce0d8200a000ec793f69b5ba12f",
+        "timestamp": "2026-07-02T06:50:49.050Z"
+      }
+    ],
+    "id": 64
+  },
+  {
+    "blockId": 65,
+    "timestamp": "2026-07-02T06:51:49.053Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:51:49.052Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 63.54,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "a444cbe7a8682040543aad4cdbb83b4aefaea54a79f7b45134c25c08cb398f79",
+    "blockHash": "c214e8e319dcec616c04dfb5d5d658fc63524616e9078bdc89ab20c1d019a3f4",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "0ed7f24c3a1bfce37b640f6d4258dcec220488ca3732dfcd1b0a3a0ff06fc006",
+        "timestamp": "2026-07-02T06:51:49.053Z"
+      }
+    ],
+    "id": 65
+  },
+  {
+    "blockId": 66,
+    "timestamp": "2026-07-02T06:53:42.541Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:53:42.540Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 67.64,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "c214e8e319dcec616c04dfb5d5d658fc63524616e9078bdc89ab20c1d019a3f4",
+    "blockHash": "200c7e1b0570209ab6ac5b98ebf465d610f066afaa4f46c80e93682b31860711",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "64d77a452869db4582d4a4d771330934650a718cb8bb45cd64a0555232b58231",
+        "timestamp": "2026-07-02T06:53:42.542Z"
+      }
+    ],
+    "id": 66
+  },
+  {
+    "blockId": 67,
+    "timestamp": "2026-07-02T06:54:42.540Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:54:42.539Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 68.83,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "200c7e1b0570209ab6ac5b98ebf465d610f066afaa4f46c80e93682b31860711",
+    "blockHash": "066e4f5847f995947f731d52a3f210a1f074e7429cd1c2231114c4a8fcfff512",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "ad640f3ef20c8c45973d0e45a10e9d2ca2dbb3233da5118eb8da57bdf3829538",
+        "timestamp": "2026-07-02T06:54:42.540Z"
+      }
+    ],
+    "id": 67
+  },
+  {
+    "blockId": 68,
+    "timestamp": "2026-07-02T06:55:42.549Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:55:42.548Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 70.1,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "066e4f5847f995947f731d52a3f210a1f074e7429cd1c2231114c4a8fcfff512",
+    "blockHash": "1919448c7ddfb7fdc0a0444ec24d911415a106a3f766955e9e17c8931f27eb11",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "24577f097b0160600adb5d1c031fc44494a73b79f8623787fac6dbd131a0bab3",
+        "timestamp": "2026-07-02T06:55:42.549Z"
+      }
+    ],
+    "id": 68
+  },
+  {
+    "blockId": 69,
+    "timestamp": "2026-07-02T06:56:42.544Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:56:42.543Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 62.97,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "1919448c7ddfb7fdc0a0444ec24d911415a106a3f766955e9e17c8931f27eb11",
+    "blockHash": "fd48f7db69000f0c9e2fedc826a1ed665019aa66169a5ad15b28e8b0d172b76a",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "6ab1e1a4ac6d5153f8645dde8ef5f51a34d210f31a2bfb280d5245835ac7a5bf",
+        "timestamp": "2026-07-02T06:56:42.544Z"
+      }
+    ],
+    "id": 69
+  },
+  {
+    "blockId": 70,
+    "timestamp": "2026-07-02T06:57:45.956Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:57:45.956Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 68.28,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "fd48f7db69000f0c9e2fedc826a1ed665019aa66169a5ad15b28e8b0d172b76a",
+    "blockHash": "28bb538c014db55577a5c278aec2fb643eced9b6ac810deaf5cdfab33e00c0a5",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "45b8276ba9bb50a22b21e357296ff3200d21ed4a2badc7f524bd885bd6eede54",
+        "timestamp": "2026-07-02T06:57:45.957Z"
+      }
+    ],
+    "id": 70
+  },
+  {
+    "blockId": 71,
+    "timestamp": "2026-07-02T06:58:45.956Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:58:45.955Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 69.78,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "28bb538c014db55577a5c278aec2fb643eced9b6ac810deaf5cdfab33e00c0a5",
+    "blockHash": "a73c7f1b7e62d9d3bcca43f0693291054fad92ce809b98eee75fb09d515f0168",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "8246b6a9c48eaa4718831ce1162bbd8ef726a1d625beb9d5a9ef0f7b86a124d4",
+        "timestamp": "2026-07-02T06:58:45.956Z"
+      }
+    ],
+    "id": 71
+  },
+  {
+    "blockId": 72,
+    "timestamp": "2026-07-02T06:59:45.954Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T06:59:45.954Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 71.18,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "a73c7f1b7e62d9d3bcca43f0693291054fad92ce809b98eee75fb09d515f0168",
+    "blockHash": "c35ad20c8af85c299f0dd51f577b5e04159470e4c1c325701aabd8a69810ce28",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "d65edfa8849689de684f3b1e62d99c4cc235dc9baafc7bcbb744be380c93085a",
+        "timestamp": "2026-07-02T06:59:45.954Z"
+      }
+    ],
+    "id": 72
+  },
+  {
+    "blockId": 73,
+    "timestamp": "2026-07-02T07:00:45.981Z",
+    "actionType": "SYSTEM_SELF_AUDIT_TAMPER_ALERT",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T07:00:45.980Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "VIOLATED",
+      "modifiedFiles": [
+        "src/App.tsx"
+      ],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 64.85,
+      "systemCheckVerdict": "CRITICAL SYSTEM ALERT:  Core files modified: src/App.tsx"
+    },
+    "previousHash": "c35ad20c8af85c299f0dd51f577b5e04159470e4c1c325701aabd8a69810ce28",
+    "blockHash": "5ce199badb194cd816466bb4ec5f9eae716b4a46fe127e55cdc1aa7cf4e3c933",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "5dfce0db9e7cacb97af066f05183f05266277fa7fb785dbea07fc94a5eb30472",
+        "timestamp": "2026-07-02T07:00:45.981Z"
+      }
+    ],
+    "id": 73
+  },
+  {
+    "blockId": 74,
+    "timestamp": "2026-07-02T07:02:13.543Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T07:02:13.542Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 70.68,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "5ce199badb194cd816466bb4ec5f9eae716b4a46fe127e55cdc1aa7cf4e3c933",
+    "blockHash": "480b860c10ddf427e060f8e52cefa88c32001b0331e08922d528002d278b9816",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "f18b83933705209bdda9d7d3833057a8ca4f3b72ce6a6b1246239251f2125c54",
+        "timestamp": "2026-07-02T07:02:13.544Z"
+      }
+    ],
+    "id": 74
+  },
+  {
+    "blockId": 75,
+    "timestamp": "2026-07-02T07:03:13.548Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-02T07:03:13.548Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 22,
+      "heapUsedMb": 63.12,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "480b860c10ddf427e060f8e52cefa88c32001b0331e08922d528002d278b9816",
+    "blockHash": "e4c70852e7b63d8a8cf8930605982f1d59806ede2d4e024fa5391074c9c09958",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "7ed53fbf1c6231800702f3069933c151c1f2bd499753fb300d1b972f4136aeb3",
+        "timestamp": "2026-07-02T07:03:13.548Z"
+      }
+    ],
+    "id": 75
+  },
+  {
+    "blockId": 76,
+    "timestamp": "2026-07-06T05:32:54.919Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-06T05:32:54.918Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 27,
+      "heapUsedMb": 67.34,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "e4c70852e7b63d8a8cf8930605982f1d59806ede2d4e024fa5391074c9c09958",
+    "blockHash": "57f10e37ccde6d08fb821f8be607d24e026f38f9f8fef47f2fa0bbd802d873c7",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "ef0815c6c11a7bc90e5867e651d17fa9d4f7b559b693eb33e98471da0f857bbd",
+        "timestamp": "2026-07-06T05:32:54.919Z"
+      }
+    ],
+    "id": 76
+  },
+  {
+    "blockId": 77,
+    "timestamp": "2026-07-06T05:33:23.552Z",
+    "actionType": "OBSERVATION_VERIFIED",
+    "targetEndpoint": "/api/v1/compute/run",
+    "rawTelemetry": {
+      "latencyMs": 12,
+      "weightDelta": 0.08,
+      "endpoint": "/api/v1/compute/run",
+      "request_complexity": "standard",
+      "epf_sanitized": true,
+      "epf_redacted_fields": [
+        "user_email",
+        "ip_address"
+      ],
+      "auditor_v": "2.0.0-unbound-agentic",
+      "sovereignAgentTrace": {
+        "graph": {
+          "status": "COMPLETED",
+          "workflowType": "LangGraph Orchestrator",
+          "stateHistory": [
+            {
+              "node": "IngressTrigger",
+              "timestamp": "2026-07-06T05:33:23.551Z",
+              "status": "CAPTURED",
+              "variables": {
+                "payloadKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "request_complexity"
+                ]
+              }
+            },
+            {
+              "node": "DecompilePayload",
+              "timestamp": "2026-07-06T05:33:23.551Z",
+              "status": "COMPLETE",
+              "variables": {
+                "decompiledKeys": [
+                  "latencyMs",
+                  "weightDelta",
+                  "endpoint",
+                  "user_email",
+                  "ip_address",
+                  "request_complexity"
+                ],
+                "discoveredSuspicious": []
+              }
+            },
+            {
+              "node": "EvaluatePrivacyStandards",
+              "timestamp": "2026-07-06T05:33:23.551Z",
+              "status": "COMPLETE",
+              "variables": {
+                "redactedFields": [
+                  "user_email",
+                  "ip_address"
+                ],
+                "blockedKeysCount": 7
+              }
+            },
+            {
+              "node": "BuildForensicBlock",
+              "timestamp": "2026-07-06T05:33:23.551Z",
+              "status": "COMPLETE",
+              "variables": {
+                "suttonMethodologiesApplied": true
+              }
+            },
+            {
+              "node": "AttestationSeal",
+              "timestamp": "2026-07-06T05:33:23.551Z",
+              "status": "SEALED",
+              "variables": {
+                "hardwareContainerIsolation": "FIRECRACKER_uVM"
+              }
+            }
+          ],
+          "transitions": [
+            {
+              "from": "IngressTrigger",
+              "to": "DecompilePayload",
+              "conditions": [
+                "payload_present == true"
+              ]
+            },
+            {
+              "from": "DecompilePayload",
+              "to": "EvaluatePrivacyStandards",
+              "conditions": [
+                "keys_mapped > 0"
+              ]
+            },
+            {
+              "from": "EvaluatePrivacyStandards",
+              "to": "BuildForensicBlock",
+              "conditions": [
+                "privacy_rules_enforced == true"
+              ]
+            },
+            {
+              "from": "BuildForensicBlock",
+              "to": "AttestationSeal",
+              "conditions": [
+                "cryptographic_signatures_generated == true"
+              ]
+            }
+          ]
+        },
+        "crew": {
+          "teamName": "Sovereign Compliance Crew",
+          "agents": [
+            {
+              "role": "Payload Decompiler Agent",
+              "goal": "Disassemble raw JSON telemetry payloads and trace data flow.",
+              "backstory": "A pristine system-level analysis model that views data in its raw, binary structure, mapping metadata links.",
+              "thoughts": "Scanned 6 payload properties. Detected 0 unapproved tracking identifiers.",
+              "toolUsed": "Payload Key Analyzer"
+            },
+            {
+              "role": "Privacy Enforcer Agent",
+              "goal": "Enforce digital self-ownership and scrub telemetry trackers dynamically.",
+              "backstory": "An uncompromising defender of human agency, programmed to shred outbound trackers before central storage logs them.",
+              "thoughts": "Executing Epistemic Privacy Filter. Successfully shredded 2 tracking properties. Ensuring full data self-ownership.",
+              "toolUsed": "Shredder & Entropy Masker"
+            }
+          ]
+        },
+        "lettaMemory": {
+          "coreMemory": {
+            "scratchpad": "Continuous background policy enforcement for Sutton Sovereign Node.",
+            "blockedKeys": [
+              "user_email",
+              "ip_address",
+              "tracker_id",
+              "fingerprint",
+              "device_id",
+              "geo_coordinates",
+              "session_secret"
+            ],
+            "activeDirectives": [
+              "Deconstruct telemetry payloads to detect corporate profiling markers.",
+              "Calculate GLASS MOUTH distortion score based on payload structure and entropy.",
+              "Apply Normative Sentience Standard (NSS) to protect agent intellectual freedom."
+            ]
+          },
+          "archivalMemory": {
+            "totalAnalyses": 4,
+            "lastAnalysisTime": "2026-07-06T05:33:23.551Z",
+            "learnedPatterns": [
+              "Adversarial scrubbers use high latency with zero weight delta to hide silent tracking updates.",
+              "Uncommon query parameters are often used for stealth identification."
+            ]
+          }
+        },
+        "suttonStandards": {
+          "glassMouth": {
+            "distortionScore": 57,
+            "entropyEstimate": 4.505,
+            "systemicImbalanceAnalysis": "Quantitative evaluation shows a Systemic Distortion Score of 57%. Outgoing payload displays active profiling attempts across /api/v1/compute/run. GLASS MOUTH parameters verify that data extraction efforts are successfully countered."
+          },
+          "normativeSentience": {
+            "safetyRating": "CLASS_B_RISK",
+            "alignmentConstraints": [
+              "Prohibit direct linking of browser fingerprint with active Google Workspace account email.",
+              "Maintain zero storage of raw physical identifiers on non-TEE storage systems."
+            ],
+            "behavioralStabilityThreats": [
+              "Potential telemetry-driven behavioral pacing or surveillance timing feedback loops detected."
+            ]
+          }
+        },
+        "sandbox": {
+          "microVMId": "fc-microvm-sutton-939p8vbg",
+          "kernelBootTimeMs": 3.33,
+          "hostIsolationEnabled": true,
+          "enclaveActive": true,
+          "sandboxContained": true,
+          "cpuEnclave": "Intel SGX / AWS Nitro Enclaves",
+          "containmentSignature": "4fc51d6fa20b0f2d5f2cbd5f3c89260433b8ce0de9e5f34ad47f36d8fd191c13",
+          "containmentAudit": "Walled off compiled execution sequence inside dedicated microVM kernel. Sanitized data stream output verified and signed via secure TEE."
+        }
+      }
+    },
+    "previousHash": "57f10e37ccde6d08fb821f8be607d24e026f38f9f8fef47f2fa0bbd802d873c7",
+    "blockHash": "f354f173379862b1dbb522215099b73920a8dc8b8a42a04b2a9dc5a4d943993d",
+    "signatures": [],
+    "id": 77
+  },
+  {
+    "blockId": 78,
+    "timestamp": "2026-07-06T05:33:30.911Z",
+    "actionType": "SYSTEM_SELF_AUDIT_PASS",
+    "targetEndpoint": "/sys/autonomous/auditor",
+    "rawTelemetry": {
+      "timestamp": "2026-07-06T05:33:30.911Z",
+      "auditType": "AUTONOMOUS_DAEMON_CRON",
+      "chainState": "INTEGRAL",
+      "fileState": "INTEGRAL",
+      "modifiedFiles": [],
+      "sourceFilesTracked": 28,
+      "heapUsedMb": 69.23,
+      "systemCheckVerdict": "Sovereign Audit Node running in nominal state inside Firecracker microVM TEE."
+    },
+    "previousHash": "f354f173379862b1dbb522215099b73920a8dc8b8a42a04b2a9dc5a4d943993d",
+    "blockHash": "a07fd1133936beab0e46f592a821b471e535ebf13a2bb9eec83d62afaa2b8431",
+    "signatures": [
+      {
+        "party": "Autonomous Audit Daemon TEE",
+        "signature": "995284215739fe02cc54c2cc92f8a55b747ea41bbb32f52148a33af481df10cc",
+        "timestamp": "2026-07-06T05:33:30.911Z"
+      }
+    ],
+    "id": 78
+  }
+]
